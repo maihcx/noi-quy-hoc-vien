@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Lời dẫn thuyết trình Quy chế, nội quy học viên 2026–2027 — Trung tâm GDTX tỉnh Đồng Tháp.">
+  <title>Lời dẫn thuyết trình · Quy chế & Nội quy học viên</title>
+  <style>
+    :root {
+      --read-size: 21px;
+      --navy: #15265d;
+      --navy-light: #213a85;
+      --blue: #254ad8;
+      --blue-soft: #edf2ff;
+      --gold: #ffda59;
+      --amber: #856000;
+      --green: #096b52;
+      --bg: #f3f5fa;
+      --text: #1b2c50;
+      --text-muted: #586885;
+      --card-bg: #ffffff;
+      --border: #dce3ef;
+      --active-bg: #fff9e5;
+      --active-border: #ebdfb5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      height: 100vh;
+      height: 100dvh;
+      display: grid;
+      grid-template-rows: auto auto minmax(0, 1fr) auto;
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Helvetica, Arial, sans-serif;
+      overflow: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    button, select, input {
+      font: inherit;
+    }
+
+    button {
+      cursor: pointer;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      background: var(--card-bg);
+      color: var(--text);
+      padding: 8px 14px;
+      min-height: 40px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all .15s ease;
+    }
+
+    button:hover:not(:disabled) {
+      background: #f8fafd;
+      border-color: #b5c5e3;
+    }
+
+    button:disabled {
+      opacity: .4;
+      cursor: default;
+    }
+
+    button:focus-visible, select:focus-visible {
+      outline: 3px solid #d6a000;
+      outline-offset: 2px;
+    }
+
+    /* HEADER */
+    header.app-header {
+      background: var(--navy);
+      color: white;
+      padding: 14px max(20px, calc((100vw - 980px) / 2));
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+      z-index: 10;
+    }
+
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      border-radius: 8px;
+      object-fit: cover;
+      background: white;
+      padding: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .brand-info small {
+      display: block;
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+
+    .brand-info h1 {
+      font-size: 20px;
+      line-height: 1.25;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .brand-info p {
+      margin-top: 2px;
+      color: #cbd7f5;
+      font-size: 12px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .view-toggle-btn {
+      background: rgba(255, 255, 255, 0.12);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      font-size: 12px;
+      padding: 7px 12px;
+      min-height: 36px;
+    }
+
+    .view-toggle-btn:hover {
+      background: rgba(255, 255, 255, 0.22);
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    /* TOOLBAR / SETTINGS */
+    .toolbar {
+      background: white;
+      border-bottom: 1px solid var(--border);
+      padding: 10px max(20px, calc((100vw - 980px) / 2));
+      z-index: 5;
+    }
+
+    .toolbar-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .chapter-select-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .chapter-select-wrap label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    select#chapter-select {
+      border: 1px solid #cbd5e5;
+      border-radius: 8px;
+      padding: 7px 12px;
+      background: white;
+      color: var(--text);
+      font-size: 13.5px;
+      font-weight: 600;
+      max-width: 320px;
+      cursor: pointer;
+    }
+
+    .font-tools {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .font-tools span {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-right: 2px;
+    }
+
+    .font-btn {
+      padding: 4px 10px;
+      min-height: 34px;
+      min-width: 38px;
+      font-size: 13.5px;
+      font-weight: 700;
+    }
+
+    .font-size-display {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-muted);
+      min-width: 38px;
+      text-align: center;
+    }
+
+    .toolbar-hint {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      font-size: 11.5px;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .reading-hint {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .reading-hint svg {
+      flex-shrink: 0;
+      width: 14px;
+      height: 14px;
+      fill: #856000;
+    }
+
+    .time-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      background: #eef2fa;
+      color: var(--blue);
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 12px;
+      white-space: nowrap;
+    }
+
+    /* MAIN READER */
+    main#reader {
+      overflow-y: auto;
+      min-height: 0;
+      padding: 20px max(20px, calc((100vw - 980px) / 2)) 40px;
+      scroll-behavior: smooth;
+    }
+
+    .chapter-heading-banner {
+      background: linear-gradient(135deg, #15265d 0%, #213a85 100%);
+      color: white;
+      padding: 16px 22px;
+      border-radius: 12px;
+      margin-bottom: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .chapter-heading-banner h2 {
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .chapter-heading-banner .duration {
+      font-size: 12.5px;
+      background: rgba(255, 255, 255, 0.18);
+      padding: 4px 10px;
+      border-radius: 20px;
+      white-space: nowrap;
+    }
+
+    /* SPEECH PART CARDS */
+    .speech-part {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--border);
+      padding: 20px 24px;
+      border-radius: 12px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      transition: all .18s ease;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .speech-part:hover {
+      border-color: #cbd8ee;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+    }
+
+    .speech-part.active {
+      border-left-color: var(--blue);
+      background: var(--active-bg);
+      border-top-color: var(--active-border);
+      border-bottom-color: var(--active-border);
+      border-right-color: var(--active-border);
+      box-shadow: 0 4px 12px rgba(37, 74, 216, 0.08);
+    }
+
+    .speech-part-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .speech-part h2 {
+      font-size: 14.5px;
+      line-height: 1.4;
+      color: var(--blue);
+      font-weight: 700;
+      letter-spacing: .01em;
+    }
+
+    .speech-badge {
+      font-size: 11px;
+      padding: 2px 7px;
+      border-radius: 6px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+    .speech-part.lead {
+      border-left-color: #3b82f6;
+    }
+    .speech-part.lead .speech-badge {
+      background: #e0edff;
+      color: #1d4ed8;
+    }
+
+    .speech-part.transition {
+      border-left-color: var(--amber);
+      background: #fdfbf7;
+    }
+    .speech-part.transition h2 {
+      color: var(--amber);
+    }
+    .speech-part.transition.active {
+      background: #fff8e8;
+      border-left-color: var(--amber);
+    }
+    .speech-part.transition .speech-badge {
+      background: #fdf0cd;
+      color: #856000;
+    }
+
+    .speech-part.closing {
+      border-left-color: var(--green);
+      background: #f6fbf9;
+    }
+    .speech-part.closing h2 {
+      color: var(--green);
+    }
+    .speech-part.closing.active {
+      background: #eef9f5;
+      border-left-color: var(--green);
+    }
+    .speech-part.closing .speech-badge {
+      background: #d4f2e8;
+      color: #096b52;
+    }
+
+    .speech-part p {
+      font-size: var(--read-size);
+      line-height: 1.85;
+      margin-bottom: 18px;
+      color: var(--text);
+    }
+
+    .speech-part p:last-child {
+      margin-bottom: 0;
+    }
+
+    .active-indicator {
+      display: none;
+      font-size: 11px;
+      color: #b87b00;
+      font-weight: 600;
+    }
+
+    .speech-part.active .active-indicator {
+      display: inline-block;
+    }
+
+    /* FOOTER ACTIONS */
+    footer.app-footer {
+      background: white;
+      padding: 12px max(20px, calc((100vw - 980px) / 2));
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      z-index: 10;
+    }
+
+    .footer-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .page-indicator {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .footer-actions {
+      display: flex;
+      gap: 8px;
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: white;
+      border-color: var(--blue);
+    }
+
+    .btn-primary:hover:not(:disabled) {
+      background: #1b3dc0;
+      border-color: #1b3dc0;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 680px) {
+      header.app-header {
+        padding: 12px 16px;
+      }
+      .brand-info h1 {
+        font-size: 17px;
+      }
+      .toolbar {
+        padding: 10px 16px;
+      }
+      select#chapter-select {
+        max-width: 100%;
+        width: 100%;
+      }
+      .chapter-select-wrap {
+        width: 100%;
+      }
+      .toolbar-hint {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      main#reader {
+        padding: 16px 14px 30px;
+      }
+      .speech-part {
+        padding: 16px 16px;
+      }
+      footer.app-footer {
+        padding: 10px 14px;
+        flex-wrap: wrap;
+      }
+      .footer-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .footer-actions button {
+        flex: 1;
+      }
+    }
+
+    /* PRINT STYLES */
+    @media print {
+      body {
+        height: auto;
+        overflow: visible;
+        display: block;
+        background: white;
+        color: black;
+      }
+      header.app-header, .toolbar, footer.app-footer, .header-actions {
+        display: none !important;
+      }
+      main#reader {
+        overflow: visible;
+        padding: 0;
+      }
+      .speech-part {
+        border: 1px solid #ccc !important;
+        border-left: 5px solid #333 !important;
+        background: white !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        margin-bottom: 20px;
+      }
+      .speech-part p {
+        font-size: 15pt !important;
+        line-height: 1.6 !important;
+        color: black !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="app-header">
+    <div class="brand-group">
+      <img src="img/logo.jpg" alt="Logo GDTX Đồng Tháp" class="brand-logo" onerror="this.style.display='none'">
+      <div class="brand-info">
+        <small>LỜI DẪN THUYẾT TRÌNH · NĂM HỌC 2026–2027</small>
+        <h1 id="header-title">Quy chế, nội quy học viên</h1>
+        <p>Trung tâm GDTX tỉnh Đồng Tháp · Ước tính 15–20 phút</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="view-toggle-btn" id="toggle-view-btn" title="Chuyển chế độ xem">
+        <span id="toggle-view-text">Xem toàn bộ nội dung</span>
+      </button>
+      <button class="view-toggle-btn" id="print-btn" title="In ra giấy hoặc lưu PDF" onclick="window.print()">
+        <span>In bài nói</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- TOOLBAR / SETTINGS -->
+  <section class="toolbar">
+    <div class="toolbar-row">
+      <div class="chapter-select-wrap">
+        <label for="chapter-select">Phần:</label>
+        <select id="chapter-select" aria-label="Chọn phần bài thuyết trình"></select>
+      </div>
+
+      <div class="font-tools">
+        <span>Cỡ chữ:</span>
+        <button class="font-btn" id="btn-smaller" aria-label="Giảm cỡ chữ" title="Giảm cỡ chữ">A−</button>
+        <button class="font-btn" id="btn-default-font" aria-label="Cỡ chữ mặc định" title="Cỡ chữ mặc định">Chuẩn</button>
+        <button class="font-btn" id="btn-larger" aria-label="Tăng cỡ chữ" title="Tăng cỡ chữ">A+</button>
+        <span class="font-size-display" id="font-size-display">21px</span>
+      </div>
+    </div>
+
+    <div class="toolbar-hint">
+      <div class="reading-hint">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+        <span>Đọc nội dung trong các khung. Tiêu đề màu sắc là chỉ dẫn phân đoạn, không cần đọc to thành lời. Bấm vào khung để đánh dấu vị trí đang nói.</span>
+      </div>
+      <div class="time-badge" id="chapter-time-badge">
+        <span>Thời lượng: 1 phút</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- READER VIEW -->
+  <main id="reader" aria-label="Nội dung bài thuyết trình"></main>
+
+  <!-- FOOTER CONTROLS -->
+  <footer class="app-footer" id="app-footer">
+    <div class="footer-left">
+      <span class="page-indicator" id="footer-page-indicator">Phần 1 / 7 · Giới thiệu</span>
+    </div>
+    <div class="footer-actions">
+      <button id="btn-prev" disabled>← Phần trước</button>
+      <button id="btn-next" class="btn-primary">Phần tiếp theo →</button>
+    </div>
+  </footer>
+
+  <!-- SPEECH DATA EMBEDDED -->
+  <script id="speech-data" type="application/json">
+{
+  "duration": "15–20 phút, tùy tốc độ đọc và thời gian chuyển trang",
+  "chapters": [
+    {
+      "name": "Giới thiệu",
+      "time": "1 phút",
+      "lead": [
+        "Kính thưa quý thầy cô, chào các bạn học viên!",
+        "Hôm nay, chúng ta cùng tìm hiểu quy chế và nội quy dành cho học viên Trung tâm Giáo dục thường xuyên tỉnh Đồng Tháp trong năm học 2026–2027. Nội dung này giúp mỗi người biết mình cần thực hiện những gì khi đến lớp, những hành vi cần tránh và cách ghi nhận sự cố gắng trong quá trình rèn luyện.",
+        "Bài trình bày gồm sáu phần: học tập và chuyên cần; trang phục và ứng xử; môi trường và an toàn; các mức điểm trừ; các mức điểm cộng; cuối cùng là cách xếp loại rèn luyện.",
+        "Các bạn có thể chú ý trước vào những việc mình thực hiện mỗi ngày: đi học đúng giờ, chuẩn bị trang phục, giữ trật tự và cư xử tôn trọng với mọi người. Chúng ta bắt đầu từ việc đến lớp nhé!"
+      ],
+      "blocks": [],
+      "transition": ""
+    },
+    {
+      "name": "Học tập và chuyên cần",
+      "time": "2–3 phút",
+      "lead": [
+        "Trước hết là thời gian học và việc duy trì chuyên cần. Đây là những quy định gắn với mỗi buổi đến lớp của chúng ta."
+      ],
+      "blocks": [
+        {
+          "key": "1-0",
+          "title": "Có mặt trước giờ học",
+          "paragraphs": [
+            "Học viên lớp buổi sáng phải có mặt trước sáu giờ năm mươi phút. Học viên lớp buổi tối phải có mặt trước mười tám giờ. Lịch học diễn ra từ thứ Hai đến thứ Bảy hằng tuần, theo đúng thời khóa biểu.",
+            "Điều cần nhớ ở đây là thời gian có mặt tại Trung tâm. Chúng ta nên chủ động sắp xếp việc đi lại để có mặt trước các mốc giờ này."
+          ]
+        },
+        {
+          "key": "1-1",
+          "title": "Ra vào cổng đúng quy định",
+          "paragraphs": [
+            "Nếu đến sau bảy giờ sáng hoặc sau mười tám giờ mười phút buổi tối, học viên chỉ được vào lớp khi có giấy xác nhận của phòng Quản lý học viên.",
+            "Trong buổi học, chúng ta không tự ý ra về. Khi cần ra cổng giữa buổi, học viên cũng phải có giấy xác nhận của phòng Quản lý học viên. Vì vậy, có việc cần ra ngoài thì phải thực hiện đúng thủ tục trước khi rời Trung tâm."
+          ]
+        },
+        {
+          "key": "1-2",
+          "title": "Nghỉ học và xin phép",
+          "paragraphs": [
+            "Khi cần nghỉ học, cha mẹ hoặc người giám hộ (người chịu trách nhiệm về việc học của học viên) phải đến phòng Quản lý học viên để xin phép. Việc xin phép được thực hiện trước, ngay trong ngày nghỉ, hoặc chậm nhất vào hôm sau ngày nghỉ.",
+            "Nếu đã nghỉ không phép, vào ngày hôm sau đi học lại, cha hoặc mẹ phải có đơn xin phép nộp cho giáo viên Quản lý học viên để nhận Giấy vào lớp thì học viên mới được vào học.",
+            "Có hai giới hạn cần đặc biệt lưu ý. Nghỉ quá bốn mươi lăm buổi trong một năm học, tính cả nghỉ có phép và không phép, sẽ bị ở lại lớp hoặc không được dự thi tốt nghiệp. Nghỉ quá một tuần không phép thì Trung tâm mời phụ huynh và tiến hành kỷ luật theo quy định."
+          ]
+        },
+        {
+          "key": "1-3",
+          "title": "Trong giờ học",
+          "paragraphs": [
+            "Trong giờ học, học viên không ngủ, không trốn tiết và phải ngồi đúng chỗ quy định. Chúng ta giữ trật tự, chỉ ra khỏi lớp khi được thầy cô đang giảng dạy cho phép.",
+            "Khi muốn phát biểu, học viên giơ tay xin phép và đứng lên để trình bày. Đồng thời, mỗi người cần tập trung, tích cực học tập và trung thực trong học tập, kiểm tra, thi cử cũng như tuyển sinh."
+          ]
+        }
+      ],
+      "transition": "Sau thời gian học và nề nếp trong lớp, chúng ta cùng xem mình cần chuẩn bị trang phục và ứng xử như thế nào khi đến Trung tâm."
+    },
+    {
+      "name": "Trang phục và ứng xử",
+      "time": "2 phút",
+      "lead": [
+        "Sau khi nắm rõ nề nếp học tập, chúng ta cùng chuyển sang quy định về trang phục, diện mạo và văn hóa ứng xử – những nét đẹp văn minh cần có của mỗi học viên Trung tâm."
+      ],
+      "blocks": [
+        {
+          "key": "2-0",
+          "title": "Trang phục đúng quy định",
+          "paragraphs": [
+            "Trang phục quy định là áo sơ mi trắng, quần tây xanh hoặc đen. Không mặc quần jean, quần kaki, quần áo quá mỏng, quần áo lửng hoặc áo thun ôm sát.",
+            "Học viên nam phải bỏ áo vào quần. Học viên không mặc áo khoác trong khuôn viên Trung tâm. Giày dép phải có quai hậu, chẳng hạn sandal, bata hoặc giày tây. Khi đến lớp, các bạn phải đeo bảng tên đúng mẫu quy định.",
+            "Trước khi đi học, chúng ta có thể kiểm tra lại áo, quần, giày dép và bảng tên. Đây là cách đơn giản để chuẩn bị đầy đủ ngay từ đầu buổi."
+          ]
+        },
+        {
+          "key": "2-1",
+          "title": "Diện mạo khi đến lớp",
+          "paragraphs": [
+            "Về diện mạo, học viên không nhuộm tóc có màu khác ngoài màu đen. Học viên nam không để tóc dài, không tạo kiểu tóc lập dị và không đeo bông tai."
+          ]
+        },
+        {
+          "key": "2-2",
+          "title": "Văn hóa ứng xử",
+          "paragraphs": [
+            "Trong giao tiếp, chúng ta kính trọng cha mẹ, thầy cô, cán bộ, nhân viên Trung tâm và những người lớn tuổi; thực hiện lời chào lễ phép khi gặp thầy cô và người lớn tuổi.",
+            "Giữa các học viên với nhau, cần đoàn kết và giúp đỡ trong học tập, rèn luyện. Mỗi người thực hiện nghiêm túc nội quy Trung tâm và chấp hành pháp luật của Nhà nước.",
+            "Không nói tục, chửi thề và tuyệt đối không xúc phạm thầy cô, cán bộ, nhân viên hoặc các học viên khác. Khi trao đổi với nhau, dù đang đồng ý hay có điều chưa thống nhất, chúng ta vẫn cần giữ sự tôn trọng."
+          ]
+        }
+      ],
+      "transition": "Sự tôn trọng còn thể hiện ở cách chúng ta giữ gìn lớp học và không gian chung. Đó là nội dung tiếp theo."
+    },
+    {
+      "name": "Môi trường và an toàn",
+      "time": "1–2 phút",
+      "lead": [
+        "Một môi trường học đường an toàn, xanh sạch đẹp là không gian chung cho tất cả chúng ta. Xin mời quý thầy cô và các bạn cùng theo dõi các quy định về bảo vệ tài sản và trật tự an ninh."
+      ],
+      "blocks": [
+        {
+          "key": "3-0",
+          "title": "Giữ gìn tài sản chung",
+          "paragraphs": [
+            "Mỗi học viên có trách nhiệm giữ gìn và bảo vệ tài sản của Trung tâm. Không viết, vẽ bậy lên bảng, tường hoặc bàn ghế."
+          ]
+        },
+        {
+          "key": "3-1",
+          "title": "Tiết kiệm điện, nước",
+          "paragraphs": [
+            "Trước khi ra về, chúng ta nhớ tắt đèn và quạt. Sau khi sử dụng nhà vệ sinh, cần khóa vòi nước. Những việc này cần được thực hiện đều đặn trong mỗi buổi học."
+          ]
+        },
+        {
+          "key": "3-2",
+          "title": "Vệ sinh môi trường",
+          "paragraphs": [
+            "Học viên giữ gìn vệ sinh trong lớp, ngoài lớp và toàn bộ khuôn viên Trung tâm; bỏ rác đúng nơi quy định. Một chỗ ngồi sạch sẽ và một lớp học gọn gàng cũng giúp việc học của mọi người thuận tiện hơn."
+          ]
+        },
+        {
+          "key": "3-3",
+          "title": "An toàn và an ninh trật tự",
+          "paragraphs": [
+            "Về an toàn, tuyệt đối không mang chất gây cháy, chất nổ hoặc các loại hung khí vào Trung tâm. Học viên không đánh nhau, không gây rối an ninh trật tự trong Trung tâm cũng như ở nơi công cộng.",
+            "Đến đây, chúng ta đã đi qua những quy định gắn với sinh hoạt hằng ngày: học tập, trang phục, ứng xử, vệ sinh và an toàn."
+          ]
+        }
+      ],
+      "transition": "Tiếp theo là cách những hành vi vi phạm được tính vào điểm rèn luyện."
+    },
+    {
+      "name": "Các mức điểm trừ",
+      "time": "3–4 phút",
+      "lead": [
+        "Đầu mỗi học kỳ, mỗi học viên được cấp sẵn sáu mươi điểm rèn luyện. Các hành vi vi phạm bị trừ trực tiếp vào quỹ điểm này theo từng lần vi phạm. Chúng ta sẽ xem lần lượt các mức điểm và những hành vi tương ứng."
+      ],
+      "blocks": [
+        {
+          "key": "4-0",
+          "title": "Trừ 1 điểm mỗi lần",
+          "paragraphs": [
+            "Mức trừ một điểm áp dụng cho việc mặc đồng phục không đúng quy định, không đeo bảng tên khi đến lớp, và ngủ trong giờ học.",
+            "Về giờ giấc: học viên lớp buổi sáng đi trễ sau sáu giờ năm mươi phút, và học viên lớp buổi tối đi trễ sau mười tám giờ năm phút sẽ bị trừ một điểm mỗi lần."
+          ]
+        },
+        {
+          "key": "4-1",
+          "title": "Trừ 2 điểm mỗi lần",
+          "paragraphs": [
+            "Mức trừ hai điểm áp dụng cho hành vi nghỉ học không xin phép, cùng các trường hợp đi trễ sau bảy giờ sáng đối với lớp sáng hoặc sau mười tám giờ mười phút đối với lớp tối."
+          ]
+        },
+        {
+          "key": "4-2",
+          "title": "Trừ 3 điểm mỗi lần",
+          "paragraphs": [
+            "Sử dụng điện thoại trong giờ học khi chưa được giáo viên cho phép, hoặc không tham gia hoạt động của tập thể lớp do Trung tâm tổ chức, bị trừ ba điểm mỗi lần."
+          ]
+        },
+        {
+          "key": "4-3",
+          "title": "Trừ 5 điểm mỗi lần",
+          "paragraphs": [
+            "Mức trừ năm điểm gồm: nói tục, chửi thề công khai hoặc trong khuôn viên Trung tâm; viết, vẽ bậy lên bàn ghế, tường hoặc bảng; tàng trữ, cất giữ thuốc lá điếu khi đi học; mang bài tây hoặc các loại bài khác như Uno, Ma sói vào Trung tâm."
+          ]
+        },
+        {
+          "key": "4-4",
+          "title": "Trừ 7 điểm mỗi lần",
+          "paragraphs": [
+            "Nhuộm tóc màu hoặc để kiểu tóc sai quy định, học viên nam đeo khuyên tai, hoặc không đội nón bảo hiểm khi tham gia giao thông là các hành vi thuộc mức trừ bảy điểm."
+          ]
+        },
+        {
+          "key": "4-5",
+          "title": "Trừ 10 điểm mỗi lần",
+          "paragraphs": [
+            "Mức trừ mười điểm gồm gây gổ, hăm dọa đánh nhau; phá hoại cây xanh, làm hư hỏng tài sản, cơ sở vật chất; và sử dụng thuốc lá, bao gồm thuốc lá truyền thống và thuốc lá điện tử.",
+            "Riêng thuốc lá còn có các quy định xử lý bổ sung ở phần xếp loại. Chúng ta sẽ xem kỹ phần đó ở cuối bài."
+          ]
+        },
+        {
+          "key": "4-6",
+          "title": "Trừ 15 điểm mỗi lần",
+          "paragraphs": [
+            "Gian lận hoặc vi phạm quy chế trong kiểm tra định kỳ và kiểm tra thường xuyên bị trừ mười lăm điểm mỗi lần."
+          ]
+        },
+        {
+          "key": "4-7",
+          "title": "Trừ 20 điểm mỗi lần",
+          "paragraphs": [
+            "Mức trừ hai mươi điểm áp dụng cho thái độ, hành vi thiếu tôn trọng thầy cô, cán bộ, nhân viên; tham gia đánh bạc hoặc các trò chơi ăn thua bằng tiền dưới mọi hình thức; sử dụng, lưu trữ hoặc tuyên truyền ấn phẩm độc hại, văn hóa phẩm đồi trụy."
+          ]
+        },
+        {
+          "key": "4-8",
+          "title": "Trừ 30 điểm mỗi lần",
+          "paragraphs": [
+            "Mức trừ ba mươi điểm gồm xúc phạm danh dự, nhân phẩm của người khác; bình luận, đăng nội dung hoặc hình ảnh trên mạng xã hội gây ảnh hưởng xấu đến danh dự cá nhân khác; và trộm cắp tài sản công hoặc tài sản của người khác."
+          ]
+        },
+        {
+          "key": "4-9",
+          "title": "Trừ 40 điểm mỗi lần",
+          "paragraphs": [
+            "Trực tiếp tham gia đánh nhau trong hoặc ngoài Trung tâm bị trừ bốn mươi điểm. Mức này cũng áp dụng khi vi phạm Luật Giao thông đường bộ hoặc trật tự an toàn xã hội và bị Công an lập biên bản xử phạt."
+          ]
+        },
+        {
+          "key": "4-10",
+          "title": "Trừ 50 điểm mỗi lần",
+          "paragraphs": [
+            "Mức trừ năm mươi điểm áp dụng cho việc bình luận, đăng nội dung hoặc hình ảnh trên mạng xã hội gây ảnh hưởng nghiêm trọng đến uy tín Trung tâm, hình ảnh giáo viên và nhân viên; cùng hành vi sử dụng các chất kích thích gây bạo lực hoặc chất ma túy trong khuôn viên Trung tâm."
+          ]
+        }
+      ],
+      "transition": "Bên cạnh việc tránh vi phạm, sự cố gắng và những đóng góp tích cực cũng được ghi nhận bằng điểm cộng."
+    },
+    {
+      "name": "Các mức điểm cộng",
+      "time": "2–3 phút",
+      "lead": [
+        "Điểm thưởng được cộng vào điểm rèn luyện học kỳ theo mỗi lần thực hiện. Các mức cộng gắn với việc tham gia hoạt động, đóng góp cho tập thể và thành tích đạt được."
+      ],
+      "blocks": [
+        {
+          "key": "5-0",
+          "title": "Cộng 1 điểm mỗi lần",
+          "paragraphs": [
+            "Học viên được cộng một điểm khi tham gia hoạt động thể dục thể thao, phong trào do lớp hoặc Trung tâm phát động; tham gia tích cực, có trách nhiệm vào câu lạc bộ học tập; hoặc tham gia đầy đủ hoạt động lao động công ích, vệ sinh môi trường."
+          ]
+        },
+        {
+          "key": "5-1",
+          "title": "Cộng 2 điểm mỗi lần",
+          "paragraphs": [
+            "Mức cộng hai điểm dành cho bài viết, hình ảnh được duyệt đăng trên website hoặc fanpage Trung tâm; tham gia cuộc thi Sáng tạo khoa học kỹ thuật cấp trường; hoặc tích cực hỗ trợ công tác chuẩn bị trong những ngày lễ lớn của Trung tâm."
+          ]
+        },
+        {
+          "key": "5-2",
+          "title": "Cộng 3 điểm mỗi lần",
+          "paragraphs": [
+            "Mức cộng ba điểm gồm được biểu dương là tấm gương hoặc đạt danh hiệu Người tốt, việc tốt; tích cực tham gia tình nguyện, chiến dịch vì cộng đồng; hoặc là học viên đạt nhiều Hoa điểm mười nhất trong đợt thi đua chào mừng ngày Nhà giáo Việt Nam hai mươi tháng mười một."
+          ]
+        },
+        {
+          "key": "5-3",
+          "title": "Cộng 4 điểm mỗi lần",
+          "paragraphs": [
+            "Học viên được cộng bốn điểm khi tham gia biểu diễn văn nghệ trong những ngày lễ lớn của Trung tâm; hoặc tham gia các cuộc thi, hoạt động ngoại khóa do Trung tâm, Đoàn phường hay Tỉnh Đoàn tổ chức."
+          ]
+        },
+        {
+          "key": "5-4",
+          "title": "Cộng 5 điểm mỗi lần",
+          "paragraphs": [
+            "Mức cộng năm điểm dành cho học viên được chọn tham dự kỳ thi Học sinh giỏi cấp tỉnh; tham dự cuộc thi Sáng tạo khoa học kỹ thuật cấp tỉnh; hoặc tham gia biểu diễn văn nghệ, thi đấu thể dục thể thao do Sở Giáo dục và Đào tạo tỉnh Đồng Tháp tổ chức."
+          ]
+        },
+        {
+          "key": "5-5",
+          "title": "Cộng 8 điểm mỗi lần",
+          "paragraphs": [
+            "Mức cộng tám điểm dành cho thành tích từ giải Khuyến khích trở lên trong kỳ thi Học sinh giỏi hoặc thi Sáng tạo khoa học kỹ thuật cấp tỉnh; từ Huy chương Đồng trở lên trong thi đấu thể dục thể thao cấp tỉnh; hoặc từ giải C trở lên trong các kỳ thi, liên hoan văn nghệ cấp tỉnh."
+          ]
+        },
+        {
+          "key": "5-6",
+          "title": "Những việc tốt khác",
+          "paragraphs": [
+            "Ngoài các mục vừa nêu, khi học viên có hành động đẹp hoặc việc làm tốt khác, giáo viên chủ nhiệm có thể ghi nhận và lập đề xuất gửi Ban Lãnh đạo Trung tâm xem xét cộng điểm.",
+            "Các bạn có thể lựa chọn hoạt động phù hợp với khả năng của mình và tham gia có trách nhiệm. Sự đóng góp có thể bắt đầu từ việc học tập tích cực hoặc làm tốt công việc chung của lớp."
+          ]
+        }
+      ],
+      "transition": "Sau khi cộng và trừ điểm, kết quả rèn luyện được xếp loại như thế nào? Chúng ta chuyển sang phần cuối."
+    },
+    {
+      "name": "Xếp loại và kết thúc",
+      "time": "3–4 phút",
+      "lead": [
+        "Sau khi đã tìm hiểu về điểm trừ và điểm cộng, phần cuối cùng sẽ tổng hợp kết quả rèn luyện qua các mức xếp loại, các quy định khống chế kỷ luật đặc biệt và cơ hội sửa sai nhân văn."
+      ],
+      "blocks": [
+        {
+          "key": "6-0",
+          "title": "Xếp loại trong học kỳ",
+          "paragraphs": [
+            "Kết quả rèn luyện trong mỗi học kỳ được chia thành 4 mức rõ ràng trên thang 60 điểm: Loại Tốt từ 41 đến 60 điểm; Loại Khá từ 21 đến 40 điểm; Loại Đạt từ 10 đến 20 điểm; và Loại Chưa đạt khi đạt từ 9 điểm trở xuống.",
+            "Mỗi mức xếp loại phản ánh trực tiếp sự chuyên cần và nỗ lực của học viên trong suốt học kỳ."
+          ]
+        },
+        {
+          "key": "6-1",
+          "title": "Bảng ma trận xếp loại cả năm",
+          "paragraphs": [
+            "Việc đánh giá cả năm chủ yếu căn cứ vào kết quả rèn luyện của Học kỳ II và sự tiến bộ của học viên.",
+            "Thầy cô và học viên có thể tra cứu theo bảng ma trận 16 kết hợp giữa Học kỳ I và Học kỳ II. Đặc biệt lưu ý, kết quả Học kỳ II giữ vai trò then chốt: nếu Học kỳ II bị xếp loại Chưa đạt thì kết quả cả năm chắc chắn sẽ là Chưa đạt."
+          ]
+        },
+        {
+          "key": "6-2",
+          "title": "Khống chế do vi phạm kỷ luật",
+          "paragraphs": [
+            "Trung tâm áp dụng quy định khống chế nghiêm khắc đối với các hành vi vi phạm nặng: học viên vi phạm an toàn giao thông bị công an gửi giấy báo về trường sẽ mặc định xếp loại Chưa đạt cả kỳ và cả năm.",
+            "Sử dụng thuốc lá thông thường sẽ bị trừ tiếp 20 điểm, gửi thông báo về gia đình, hạ 01 bậc rèn luyện của tháng vi phạm. Riêng thuốc lá điện tử bị trừ 40 điểm, phối hợp cơ quan chức năng xử lý và xem xét đình chỉ học tập hoặc buộc thôi học."
+          ]
+        },
+        {
+          "key": "6-3",
+          "title": "Khống chế theo kết quả học tập",
+          "paragraphs": [
+            "Về mối tương quan với học tập: nếu điểm rèn luyện đạt loại Tốt nhưng kết quả học tập xếp loại Chưa đạt thì rèn luyện sẽ bị hạ xuống loại Khá.",
+            "Tuy nhiên, quy chế có ngoại lệ rất khích lệ: nếu Học kỳ I đạt Tốt, Học kỳ II xếp loại Khá do học tập Chưa đạt, nhưng đến cuối năm kết quả học tập vươn lên loại Đạt thì rèn luyện cả năm vẫn được công nhận loại Tốt."
+          ]
+        },
+        {
+          "key": "6-4",
+          "title": "Trách nhiệm GVCN & Phối hợp gia đình",
+          "paragraphs": [
+            "Quy trình quản lý luôn bảo đảm công khai, minh bạch: hàng tuần, giáo viên chủ nhiệm có trách nhiệm công khai điểm rèn luyện định kỳ để học viên nắm rõ thông tin.",
+            "Đối với học viên thường xuyên vi phạm, giáo viên chủ nhiệm sẽ kịp thời mời phụ huynh đến phối hợp giáo dục. Đồng thời, giáo viên chủ nhiệm cũng luôn chủ động đề xuất cộng điểm thưởng cho các hành động đẹp, việc làm tốt của học viên."
+          ]
+        },
+        {
+          "key": "6-5",
+          "title": "Cơ hội sửa sai (Xóa kỷ luật)",
+          "paragraphs": [
+            "Quy chế mang tính nhân văn sâu sắc: học viên có kết quả rèn luyện xếp loại Chưa đạt, nếu trong quá trình học tập tiếp theo có biểu hiện tiến bộ rõ rệt thì giáo viên chủ nhiệm sẽ làm đơn xin xóa kỷ luật để giúp học viên được nâng lên loại Đạt.",
+            "Mọi nỗ lực thay đổi và rèn luyện tích cực của các bạn đều được Trung tâm ghi nhận và tạo điều kiện tối đa để hoàn thiện bản thân."
+          ]
+        }
+      ],
+      "transition": "Đó là toàn bộ nội dung của quy chế và nội quy học viên. Tiếp theo là lời tổng kết cho buổi sinh hoạt hôm nay."
+    }
+  ],
+  "closing": [
+    "Kính thưa quý thầy cô và các bạn!",
+    "Chúng ta vừa cùng tìm hiểu các nội dung chính của quy chế và nội quy học viên. Điều có thể thực hiện ngay sau buổi hôm nay là chuẩn bị đầy đủ trước khi đến lớp, đi học đúng giờ, giữ sự trung thực trong học tập và tôn trọng mọi người.",
+    "Mỗi học viên cũng có thể đóng góp cho tập thể bằng những việc phù hợp với mình, từ giữ vệ sinh lớp học đến tham gia hoạt động và cố gắng đạt thành tích. Khi có điểm chưa rõ, chúng ta trao đổi với giáo viên chủ nhiệm hoặc phòng Quản lý học viên để được hướng dẫn.",
+    "Chúc các bạn có một năm học nghiêm túc, tích cực và nhiều tiến bộ. Xin cảm ơn quý thầy cô và các bạn đã lắng nghe!"
+  ]
+}
+  </script>
+
+  <!-- APPLICATION LOGIC (100% STANDALONE, NO FIREBASE, NO POPUP SCRIPT) -->
+  <script>
+    'use strict';
+    (function () {
+      const speechData = JSON.parse(document.getElementById('speech-data').textContent);
+      const chapters = speechData.chapters;
+      const closing = speechData.closing;
+
+      let currentChapter = 0;
+      let isAllView = false;
+      let fontSize = 21;
+
+      const reader = document.getElementById('reader');
+      const chapterSelect = document.getElementById('chapter-select');
+      const headerTitle = document.getElementById('header-title');
+      const timeBadge = document.getElementById('chapter-time-badge');
+      const pageIndicator = document.getElementById('footer-page-indicator');
+      const btnPrev = document.getElementById('btn-prev');
+      const btnNext = document.getElementById('btn-next');
+      const btnSmaller = document.getElementById('btn-smaller');
+      const btnLarger = document.getElementById('btn-larger');
+      const btnDefaultFont = document.getElementById('btn-default-font');
+      const fontSizeDisplay = document.getElementById('font-size-display');
+      const toggleViewBtn = document.getElementById('toggle-view-btn');
+      const toggleViewText = document.getElementById('toggle-view-text');
+      const appFooter = document.getElementById('app-footer');
+
+      // Populate chapter dropdown
+      function initSelect() {
+        chapterSelect.innerHTML = '';
+        
+        // Option xem toàn bộ
+        const allOpt = document.createElement('option');
+        allOpt.value = 'all';
+        allOpt.textContent = '📖 Xem toàn bộ nội dung (Toàn văn)';
+        chapterSelect.appendChild(allOpt);
+
+        // Các chương
+        chapters.forEach((c, idx) => {
+          const opt = document.createElement('option');
+          opt.value = idx;
+          opt.textContent = `Phần ${String(idx).padStart(2, '0')}: ${c.name} (${c.time})`;
+          chapterSelect.appendChild(opt);
+        });
+
+        chapterSelect.value = currentChapter;
+      }
+
+      // Tạo thẻ bài nói
+      function createCard(key, label, paragraphs, kind = '') {
+        const article = document.createElement('article');
+        article.className = 'speech-part ' + kind;
+        article.dataset.key = key;
+
+        const header = document.createElement('div');
+        header.className = 'speech-part-header';
+
+        const h2 = document.createElement('h2');
+        h2.textContent = label;
+        header.appendChild(h2);
+
+        if (kind === 'lead' || kind === 'transition' || kind === 'closing') {
+          const badge = document.createElement('span');
+          badge.className = 'speech-badge';
+          badge.textContent = kind === 'lead' ? 'Mở phần' : kind === 'transition' ? 'Chuyển phần' : 'Lời kết';
+          header.appendChild(badge);
+        } else {
+          const indicator = document.createElement('span');
+          indicator.className = 'active-indicator';
+          indicator.textContent = '● Đang xem';
+          header.appendChild(indicator);
+        }
+
+        article.appendChild(header);
+
+        paragraphs.forEach(pText => {
+          const p = document.createElement('p');
+          p.textContent = pText;
+          article.appendChild(p);
+        });
+
+        // Click để toggle active
+        article.addEventListener('click', () => {
+          const wasActive = article.classList.contains('active');
+          document.querySelectorAll('.speech-part.active').forEach(el => el.classList.remove('active'));
+          if (!wasActive) {
+            article.classList.add('active');
+          }
+        });
+
+        return article;
+      }
+
+      // Render nội dung
+      function render() {
+        reader.innerHTML = '';
+
+        if (isAllView) {
+          // Render toàn bộ các chương
+          headerTitle.textContent = 'Toàn văn bài thuyết trình';
+          timeBadge.textContent = 'Tổng thời lượng: 15–20 phút';
+          toggleViewText.textContent = 'Xem theo từng phần';
+          chapterSelect.value = 'all';
+          appFooter.style.display = 'none';
+
+          chapters.forEach((c, cIdx) => {
+            const banner = document.createElement('div');
+            banner.className = 'chapter-heading-banner';
+            banner.innerHTML = `<h2>Phần ${String(cIdx).padStart(2, '0')}: ${c.name}</h2><span class="duration">Ước tính: ${c.time}</span>`;
+            reader.appendChild(banner);
+
+            if (c.lead && c.lead.length) {
+              reader.appendChild(createCard(`lead-${cIdx}`, 'Mở phần', c.lead, 'lead'));
+            }
+
+            c.blocks.forEach(b => {
+              reader.appendChild(createCard(b.key, b.title, b.paragraphs));
+            });
+
+            if (c.transition) {
+              reader.appendChild(createCard(`trans-${cIdx}`, 'Chuyển sang phần kế tiếp', [c.transition], 'transition'));
+            }
+
+            if (cIdx === chapters.length - 1 && closing && closing.length) {
+              reader.appendChild(createCard('closing', 'Lời kết & Cảm ơn', closing, 'closing'));
+            }
+          });
+        } else {
+          // Render từng chương
+          appFooter.style.display = 'flex';
+          toggleViewText.textContent = 'Xem toàn bộ nội dung';
+          chapterSelect.value = currentChapter;
+
+          const c = chapters[currentChapter];
+          headerTitle.textContent = `Phần ${String(currentChapter).padStart(2, '0')}: ${c.name}`;
+          timeBadge.textContent = `Thời lượng: ${c.time}`;
+
+          pageIndicator.textContent = `Phần ${currentChapter + 1} / ${chapters.length} · ${c.name}`;
+          btnPrev.disabled = (currentChapter === 0);
+          btnNext.textContent = (currentChapter === chapters.length - 1) ? 'Về phần đầu ↺' : 'Phần tiếp theo →';
+
+          if (c.lead && c.lead.length) {
+            reader.appendChild(createCard('lead', 'Mở phần', c.lead, 'lead'));
+          }
+
+          c.blocks.forEach(b => {
+            reader.appendChild(createCard(b.key, b.title, b.paragraphs));
+          });
+
+          if (c.transition) {
+            reader.appendChild(createCard('transition', 'Chuyển sang phần kế tiếp', [c.transition], 'transition'));
+          }
+
+          if (currentChapter === chapters.length - 1 && closing && closing.length) {
+            reader.appendChild(createCard('closing', 'Lời kết & Cảm ơn', closing, 'closing'));
+          }
+        }
+
+        reader.scrollTop = 0;
+      }
+
+      // Điều hướng
+      function goToChapter(index) {
+        isAllView = false;
+        currentChapter = Math.max(0, Math.min(chapters.length - 1, index));
+        render();
+      }
+
+      function nextChapter() {
+        if (currentChapter >= chapters.length - 1) {
+          goToChapter(0);
+        } else {
+          goToChapter(currentChapter + 1);
+        }
+      }
+
+      function prevChapter() {
+        if (currentChapter > 0) {
+          goToChapter(currentChapter - 1);
+        }
+      }
+
+      // Cỡ chữ
+      function setFontSize(size) {
+        fontSize = Math.max(16, Math.min(32, size));
+        document.documentElement.style.setProperty('--read-size', fontSize + 'px');
+        fontSizeDisplay.textContent = fontSize + 'px';
+      }
+
+      // Event listeners
+      btnPrev.addEventListener('click', prevChapter);
+      btnNext.addEventListener('click', nextChapter);
+
+      btnSmaller.addEventListener('click', () => setFontSize(fontSize - 2));
+      btnLarger.addEventListener('click', () => setFontSize(fontSize + 2));
+      btnDefaultFont.addEventListener('click', () => setFontSize(21));
+
+      chapterSelect.addEventListener('change', (e) => {
+        if (e.target.value === 'all') {
+          isAllView = true;
+          render();
+        } else {
+          isAllView = false;
+          goToChapter(Number(e.target.value));
+        }
+      });
+
+      toggleViewBtn.addEventListener('click', () => {
+        isAllView = !isAllView;
+        render();
+      });
+
+      // Phím tắt bàn phím
+      document.addEventListener('keydown', (e) => {
+        if (e.target.closest('select, input, button')) return;
+        if (e.key === 'ArrowRight' || e.key === 'PageDown') {
+          e.preventDefault();
+          if (!isAllView) nextChapter();
+        } else if (e.key === 'ArrowLeft' || e.key === 'PageUp') {
+          e.preventDefault();
+          if (!isAllView) prevChapter();
+        } else if (e.key === 'Home') {
+          e.preventDefault();
+          goToChapter(0);
+        }
+      });
+
+      // Khởi động
+      initSelect();
+      setFontSize(21);
+      render();
+    })();
+  </script>
+</body>
+</html>
